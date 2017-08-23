@@ -1,0 +1,19 @@
+body{
+	background-color: #B22222;
+}
+#filmes, li{
+	list-style:none;
+	color:#FFFFF0;
+}
+#filmes{
+	border: solid 1px;
+	color: #000;
+}
+.genero{
+	float:left;
+}
+.cefet{
+	font-family: sans-serif;
+	text-align: center;
+	color:#FFFFF0;
+}
