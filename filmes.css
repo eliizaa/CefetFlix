@@ -1,12 +1,25 @@
 body{
-	background-color: #B22222;
+	background-image: url("http://www.publicdomainpictures.net/pictures/70000/velka/red-velvet-curtains-background.jpg");
+	font-family: 'Carrois Gothic', sans-serif;
+	color: #fff;
 }
-#filmes, li{
-	list-style:none;
-	color:#FFFFF0;
+#cefet{
+	text-align:center;
+	font-size:3em;
+	font-family: 'Allerta Stencil', sans-serif;
 }
-#filmes{
-	border: solid 1px;
+.box{
+	float: left;
+	width: 390px;
+	height: 600px;
+	margin-left: 30px;
+	padding:25px;
+	color: #fff;
+	text-align:center;
+}
+
+main{
+	width: 100%;
 	color: #000;
 }
 .genero{
@@ -16,4 +29,8 @@ body{
 	font-family: sans-serif;
 	text-align: center;
 	color:#FFFFF0;
+}
+.box:hover{
+	width:400px;
+	background-color: rgba(255, 255, 255, 0.2);
 }
