@@ -9,6 +9,7 @@
 		<script src="./js/filmes.js"></script>
 		<script>
 			$(function(){
+			console.log(filmes);
 				$.each(filmes, function (id, obj){
 					var $divOpiniao = $("<div />");
 					$.each(obj.opinioes, function(i, avaliacao){
@@ -27,7 +28,7 @@
 					});
 					
 					$("#filmes")
-					.append($("<div />").addClass("box")
+					.append($("<div />").addClass("box").attr( 'id', id )
 						.append($("<h1 />").text(obj.titulo))
 						.append($("<hr />"))
 						.append($("<img />").attr("src",obj.figura))
@@ -37,13 +38,15 @@
 						.append($("<p />").text(obj.descricao))
 						.append($("<p />").text(obj.classificacao))
 						.append($("<p />").text(obj.titulosSemelhantes))
-						.append($divOpiniao))
+						.append($divOpiniao));
+						
+					$.each(obj.titulosSemelhantes, function(idx, tituloSemelhante){
+						$("#"+id).append(
+							$("<p />").text(filmes[tituloSemelhante-1].titulo)
+						);
+					});
 				});
-				/*$.each(titulosSemelhantes, function(id, tituloSemelhante)){
-					$p.append(
-						$("<p />").text(filmes[titulosSemelhantes-1].titulo)
-					)
-				});*/
+
 			});
 		</script>
 	</head>
@@ -52,9 +55,7 @@
 		<h1 id="cefet"> CEFETflix </h1>
 		<main>
 			<section id="filmes"></section>	
-			<ul>
-			<li class="tituloSemelhante"></li>
-			</ul>
+		
 		</main>
 	</body>
 </html>
