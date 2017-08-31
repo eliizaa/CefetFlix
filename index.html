@@ -2,7 +2,9 @@
 <html>
 	<head>
 	<meta charset="utf-8"/>
-		<link rel="stylesheet" type="text/css" href="./css/filmes.css" />
+		<link rel="stylesheet" type="text/css" href="filmes.css" />
+		<link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
 		<script src="./js/jquery.min.js"></script>
 		<script src="./js/filmes.js"></script>
 		<script>
@@ -25,31 +27,26 @@
 					});
 					
 					$("#filmes")
-						.append($("<li />").text(obj.titulo))
+					.append($("<div />").addClass("box")
+						.append($("<h1 />").text(obj.titulo))
+						.append($("<hr />"))
 						.append($("<img />").attr("src",obj.figura))
-						.append($("<li />").text(obj.resumo))
-						.append($("<li />").text(obj.genero))
-						.append($("<li />").text(obj.elenco))
-						.append($("<li />").text(obj.descricao))
-						.append($("<li />").text(obj.classificacao))
-						.append($("<li />").text(obj.titulosSemelhantes))
-						.append($divOpiniao)
+						.append($("<p />").text(obj.resumo))
+						.append($("<p />").text(obj.genero))
+						.append($("<p />").text(obj.elenco))
+						.append($("<p />").text(obj.descricao))
+						.append($("<p />").text(obj.classificacao))
+						.append($("<p />").text(obj.titulosSemelhantes))
+						.append($divOpiniao))
 				});
 			});
 		</script>
 	</head>
+	
 	<body>
-		<h1 class="cefet"> CEFETflix </h1>
-		<ul id="filmes">
-			<li class="titulo"></li>
-			<li class="resumo"></li>
-			<li class="genero"></li>
-			<li class="elenco"></li>
-			<li class="descricao"></li>
-		</ul>
-		<div>
-			<p class="rating"></p>
-			<p class="descricoes"></p>
-		</div>
+		<h1 id="cefet"> CEFETflix </h1>
+		<main>
+			<section id="filmes"></section>	
+		</main>
 	</body>
 </html>
