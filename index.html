@@ -39,6 +39,11 @@
 						.append($("<p />").text(obj.titulosSemelhantes))
 						.append($divOpiniao))
 				});
+				/*$.each(titulosSemelhantes, function(id, tituloSemelhante)){
+					$p.append(
+						$("<p />").text(filmes[titulosSemelhantes-1].titulo)
+					)
+				});*/
 			});
 		</script>
 	</head>
@@ -47,6 +52,9 @@
 		<h1 id="cefet"> CEFETflix </h1>
 		<main>
 			<section id="filmes"></section>	
+			<ul>
+			<li class="tituloSemelhante"></li>
+			</ul>
 		</main>
 	</body>
 </html>
