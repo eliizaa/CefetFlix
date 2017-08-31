@@ -10,7 +10,7 @@ body{
 }
 .box{
 	float: left;
-	width: 390px;
+	width: 390px;/*350 pra telas pequenas*/
 	height: 600px;
 	margin-left: 30px;
 	padding:25px;
